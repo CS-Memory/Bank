@@ -1,22 +1,17 @@
 package com.Memory;
 /**
 * @author Memory
-* @version ´´½¨Ê±¼ä£º2020-10-14 16:59:28
-* ÀàËµÃ÷
+* @version åˆ›å»ºæ—¶é—´ï¼š2020-10-14 16:59:28
+* ç±»è¯´æ˜
 */
 
 import java.util.Scanner;
 
-/**
-* @author Memory
-* @version ´´½¨Ê±¼ä£º2020-10-14 16:08:44
-* ÀàËµÃ÷
-*/
 public class BankAccount {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("ÇëÑ¡ÔñÒª½øĞĞµÄ²Ù×÷£º1. ´æ¿î 2. È¡¿î 3. ²éÑ¯ 4. ÏÔÊ¾ÕË»§ 5. ÍË³ö");
+		System.out.println("è¯·é€‰æ‹©è¦è¿›è¡Œçš„æ“ä½œï¼š1. å­˜æ¬¾ 2. å–æ¬¾ 3. æŸ¥è¯¢ 4. æ˜¾ç¤ºè´¦æˆ· 5. é€€å‡º");
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		UserInfo user = new UserInfo(1111,"zhangsan",2000,"Sun Feb 01 00:00:00 CST 2009","2222");
@@ -38,7 +33,7 @@ public class BankAccount {
 				case 5:
 					return;	
 			}
-			System.out.println("ÇëÑ¡ÔñÒª½øĞĞµÄ²Ù×÷£º1. ´æ¿î 2. È¡¿î 3. ²éÑ¯ 4. ÏÔÊ¾ÕË»§ 5. ÍË³ö");
+			System.out.println("è¯·é€‰æ‹©è¦è¿›è¡Œçš„æ“ä½œï¼š1. å­˜æ¬¾ 2. å–æ¬¾ 3. æŸ¥è¯¢ 4. æ˜¾ç¤ºè´¦æˆ· 5. é€€å‡º");
 			n = sc.nextInt();
 		}
 	}
@@ -57,32 +52,32 @@ class UserInfo {
 		this.opentime = opentime;
 		this.id = id;
 	}
-	//´æ¿î
+	//å­˜æ¬¾
 	public void deposit() {
-		System.out.println("ÇëÊäÈëÒª´æÈëµÄ½ğ¶î£¨ÕûÊı£©£º");
+		System.out.println("è¯·è¾“å…¥è¦å­˜å…¥çš„é‡‘é¢ï¼ˆæ•´æ•°ï¼‰ï¼š");
 		Scanner sc = new Scanner(System.in);
 		int money = sc.nextInt();
 		this.balance += money;
-		System.out.println("´æ¿î³É¹¦£¡ÒÑ´æÈë " + money + "Ôª¿ÉÓÃÓà¶îÎª" + this.balance + "Ôª");
+		System.out.println("å­˜æ¬¾æˆåŠŸï¼å·²å­˜å…¥ " + money + "å…ƒå¯ç”¨ä½™é¢ä¸º" + this.balance + "å…ƒ");
 	}
-	//È¡¿î
+	//å–æ¬¾
 	public void withdrawal() {
-		System.out.println("ÇëÊäÈëÒªÈ¡³öµÄ½ğ¶î£¨ÕûÊı£©£º");
+		System.out.println("è¯·è¾“å…¥è¦å–å‡ºçš„é‡‘é¢ï¼ˆæ•´æ•°ï¼‰ï¼š");
 		Scanner sc = new Scanner(System.in);
 		int money = sc.nextInt();
 		this.balance -= money;
-		System.out.println("È¡¿î³É¹¦£¡ÒÑÈ¡³ö " + money + "Ôª¿ÉÓÃÓà¶îÎª" + this.balance + "Ôª");
+		System.out.println("å–æ¬¾æˆåŠŸï¼å·²å–å‡º " + money + "å…ƒå¯ç”¨ä½™é¢ä¸º" + this.balance + "å…ƒ");
 	}
-	//²éÑ¯Óà¶î
+	//æŸ¥è¯¢ä½™é¢
 	public void check_balance() {
-		System.out.println("ÄúµÄÓà¶î:" + this.balance);
+		System.out.println("æ‚¨çš„ä½™é¢:" + this.balance);
 	}
-	//ÏÔÊ¾ÕË»§ĞÅÏ¢
+	//æ˜¾ç¤ºè´¦æˆ·ä¿¡æ¯
 	public void show_account() {
-		System.out.println("ÕËºÅ:" + this.account);
-		System.out.println("ĞÕÃû:" + this.name);
-		System.out.println("¿ª»§Ê±¼ä:" + this.opentime);
-		System.out.println("Éí·İÖ¤ºÅ:" + this.id);
+		System.out.println("è´¦å·:" + this.account);
+		System.out.println("å§“å:" + this.name);
+		System.out.println("å¼€æˆ·æ—¶é—´:" + this.opentime);
+		System.out.println("èº«ä»½è¯å·:" + this.id);
 	}
 }
 
